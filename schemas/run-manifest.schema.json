@@ -1,0 +1,43 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://example.invalid/brianv-agent-factory/run-manifest.schema.json",
+  "title": "BrianV Agent Factory run manifest",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schemaVersion",
+    "id",
+    "title",
+    "state",
+    "createdAt",
+    "updatedAt",
+    "approvals",
+    "evidence",
+    "history"
+  ],
+  "properties": {
+    "schemaVersion": { "const": 1 },
+    "id": { "type": "string", "pattern": "^[A-Z0-9][A-Z0-9_-]{2,31}$" },
+    "title": { "type": "string", "minLength": 1 },
+    "state": {
+      "enum": [
+        "IDEA",
+        "SPEC_DRAFT",
+        "WAITING_FOR_APPROVAL",
+        "READY_TO_BUILD",
+        "IMPLEMENTING",
+        "IMPLEMENTED",
+        "REVIEW_PASSED",
+        "REVIEW_FAILED",
+        "WAITING_FOR_MERGE",
+        "COMPLETE",
+        "CANCELLED"
+      ]
+    },
+    "createdAt": { "type": "string", "format": "date-time" },
+    "updatedAt": { "type": "string", "format": "date-time" },
+    "approvals": { "type": "array", "items": { "type": "object" } },
+    "evidence": { "type": "array", "items": { "type": "object" } },
+    "history": { "type": "array", "minItems": 1, "items": { "type": "object" } }
+  }
+}

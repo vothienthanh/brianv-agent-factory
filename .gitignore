@@ -1,0 +1,12 @@
+node_modules/
+.env
+.env.*
+!.env.example
+coverage/
+dist/
+tmp/
+runs/*
+!runs/.gitkeep
+*.log
+*.traj.json
+*.patch

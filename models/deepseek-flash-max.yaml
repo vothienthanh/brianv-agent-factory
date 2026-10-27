@@ -1,0 +1,6 @@
+# Escalation overlay. Use only after human approval.
+model:
+  model_name: "deepseek/deepseek-flash"
+  model_kwargs:
+    drop_params: true
+    reasoning_effort: "max"

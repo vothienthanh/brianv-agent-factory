@@ -1,0 +1,43 @@
+name: Feature proposal
+description: Propose a bounded, testable improvement
+title: "[Feature]: "
+labels: ["proposal"]
+body:
+  - type: markdown
+    attributes:
+      value: Do not include secrets, personal data, private logs, or customer content.
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem
+      description: What observable problem exists, for whom, and with what impact?
+    validations:
+      required: true
+  - type: textarea
+    id: example
+    attributes:
+      label: Sanitized example
+      description: Provide one minimal example without private data.
+    validations:
+      required: true
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Desired outcome
+      description: Describe the visible result, not an implementation.
+    validations:
+      required: true
+  - type: textarea
+    id: criteria
+    attributes:
+      label: Acceptance criteria
+      description: List observable Given/When/Then checks.
+    validations:
+      required: true
+  - type: textarea
+    id: non_goals
+    attributes:
+      label: Non-goals and risks
+      description: What must remain unchanged? What data or side effects need protection?
+    validations:
+      required: true

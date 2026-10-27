@@ -1,0 +1,6 @@
+# mini-SWE-agent/LiteLLM overlay. Never store DEEPSEEK_API_KEY here.
+model:
+  model_name: "deepseek/deepseek-flash"
+  model_kwargs:
+    drop_params: true
+    reasoning_effort: "high"

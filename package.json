@@ -1,0 +1,25 @@
+{
+  "name": "brianv-agent-factory",
+  "version": "0.1.0",
+  "description": "Evidence-led control plane for building open-source AI agents from real operational problems.",
+  "type": "module",
+  "author": "BrianV",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vothienthanh/brianv-agent-factory.git"
+  },
+  "homepage": "https://github.com/vothienthanh/brianv-agent-factory#readme",
+  "bugs": {
+    "url": "https://github.com/vothienthanh/brianv-agent-factory/issues"
+  },
+  "scripts": {
+    "test": "node --test",
+    "validate": "node scripts/validate-project.mjs",
+    "check": "npm run validate && npm test",
+    "new:run": "node scripts/new-run.mjs"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "license": "Apache-2.0"
+}

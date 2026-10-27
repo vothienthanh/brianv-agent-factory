@@ -1,0 +1,9 @@
+# Overlay for mini-SWE-agent v2. Load after the built-in mini.yaml.
+agent:
+  mode: confirm
+  step_limit: 20
+  cost_limit: 0.25
+  wall_time_limit_seconds: 1800
+  max_consecutive_format_errors: 3
+environment:
+  timeout: 60
